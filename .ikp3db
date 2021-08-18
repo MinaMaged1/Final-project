@@ -1,0 +1,10 @@
+IKP3db - g 11:30:21,009194 - INFO - IKP3db 1.4 - Inouk Python Debugger for CPython 3.6+
+IKP3db - g 11:30:21,009360 - INFO - IKP3db listening on 127.0.0.1:15472
+IKP3db - g 11:30:21,172582 - INFO - Connected with 127.0.0.1:35344
+IKP3db - g 11:30:21,195825 - WARNING - IKP3db 1.4.1 is available on pypi.
+IKP3db - g 11:36:00,296650 - ERROR - setBreakpoint error: Line /home/ubuntu/replace.py:18 does not exist.
+IKP3db - g 11:36:00,298855 - ERROR - setBreakpoint error: Line /home/ubuntu/replace.py:17 does not exist.
+IKP3db - g 11:36:00,301031 - ERROR - setBreakpoint error: Line /home/ubuntu/replace.py:19 does not exist.
+IKP3db - g 11:36:00,303484 - ERROR - setBreakpoint error: Line /home/ubuntu/replace.py:20 does not exist.
+IKP3db - g 11:36:00,305511 - ERROR - setBreakpoint error: Line /home/ubuntu/replace.py:15 does not exist.
+IKP3db - g 11:36:01,587611 - INFO - Program exited with exit code: 130.
