@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    : Dashboard
+{% endblock %}
+
+{% block main %}
+
+<div class="container p-5">
+    <p class="title">Your Quizzes</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Code</th>
+                <td>Option</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for quiz in quizzes %}
+                <tr>
+                    <td>{{quiz.quiz_name}}</td>
+                    <td>{{quiz.code}}</td>
+                    <td>
+                        <form method="post" action="/edit">
+                            <button type="submit" id="quiz" name="quiz" value="{{quiz.code}}" class="edit">edit</button>
+                        </form>
+                        <form method="post" action="/result">
+                            <button type="submit" id="result" name="result" value="{{quiz.code}}" class="results">Results</button>
+                        </form>
+                        <form method="post" action="/delete">
+                            <input type="hidden" id="quiz_delete" name="quiz_delete" value="yes">
+                            <button type="submit" id="delete" name="delete" value="{{quiz.code}}" class="delete">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div>
+    <p class="title">Taken Quizzes</p>
+    <table class="table container p-5">
+        <thead>
+            <tr>
+                <th>Quiz name</th>
+                <th>Score</th>
+                <th>Date&Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for take in takes %}
+            <tr>
+                <td>{{take.quiz_id}}</td>
+                <td>{{take.score}} out of {{take.total}}</td>
+                <td>{{take.take_date}} {{take.take_time}} GMT</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

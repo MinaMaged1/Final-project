@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    : edit
+{% endblock %}
+
+{% block main %}
+<div class="container p-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Question</th>
+                <th>Answer 1</th>
+                <th>Answer 2</th>
+                <th>Answer 3</th>
+                <th>Answer 4</th>
+                <th>The right answer</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for question in data %}
+                <tr>
+                    <td>{{question.question}}</td>
+                    <td>{{question.answer1}}</td>
+                    <td>{{question.answer2}}</td>
+                    <td>{{question.answer3}}</td>
+                    <td>{{question.answer4}}</td>
+                    <td>{{question.the_answer}}</td>
+                    <td>
+
+                        <form method="post" action="/delete">
+                            <input type="hidden" id="quiz_delete" name="quiz_delete" value="no">
+                            <input type="hidden" id="quiz_id" name="quiz_id" value="{{question.quiz_id}}">
+                            <input type="hidden" id="number" name="number" value="{{question.number}}">
+                            <button type="submit" class="delete">delete</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td>
+                    <form action="/create" method="post">
+                    <input type="hidden" name="quiz_id" value="{{quiz_id}}">
+                    <input type="hidden" name="code" value="{{code}}">
+                    <button type="submit" class="edit">Create New Question</button>
+                </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    : Score
+{% endblock %}
+
+{% block main %}
+<table class="table container p-5 score">
+    <thead>
+        <tc>
+            <th>Score</th>
+            <th>Percentage</th>
+        </tc>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{score}}</td>
+            <td>{{percentage}}</td>
+        </tr>
+    </tbody>
+</table>
+
+{% endblock %}

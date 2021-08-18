@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    : results
+{% endblock %}
+
+{% block main %}
+    <table class="table container p-5">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Score</th>
+                <th>Date & time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+            <tr>
+                <td>{{result.user_id}}</td>
+                <td>{{result.score}} out of {{result.total}}</td>
+                <td> {{result.take_date}} {{result.take_time}} GMT</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

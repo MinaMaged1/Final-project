@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    : Make Quiz
+{% endblock %}
+
+{% block main %}
+    <form onaction="/make" method="post" class="main">
+        <div class="form-group">
+            <input name="quiz_name" type="text" autofocus autocomplete="off" class="form-control form" placeholder="Quiz Name">
+        </div>
+        <div class="form-group">
+            <input name="code" minlength="8" maxlength="8" type="text" autofocus autocomplete="off" class="form-control" placeholder="Quiz Code">
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    : Make Question
+{% endblock %}
+
+{% block main %}
+        <form onaction="/questions" method="post" class="main">
+            <div>
+                <p class="text2">Question {{number}}</p>
+                <input name="question" type="text" autofocus autocomplete="off" class="form-control question"  size="50px" placeholder="Question"><br><br>
+                {% for i in range(4) %}
+                <br><br>
+                <input type="radio" class="answer" id="answer{{i+1}}" name="answer" value="answer{{i+1}}">
+                <label for="answer{{i+1}}" class="answer"><input type="text" name="answer{{i+1}}" placeholder="answer_{{i+1}}" autocomplete="off"></label>
+                <p></p>
+                {% endfor %}
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+        </form>
+{% endblock %}

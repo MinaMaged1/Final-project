@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    : edit
+{% endblock %}
+
+{% block main %}
+    <form action="/change" method="POST" class="main">
+        <p class="text2">Question {{data2.number}}</p>
+        <input name="question" id="question" type="text" autofocus autocomplete="off" class="form-control question"  size="50px" placeholder="Question" value="{{data2.question}}"><br><br>
+        <br><br>
+        <input type="radio" class="answer" id="answer1" name="answer" value="answer1">
+        <label for="answer1" class="answer"><input type="text" name="answer1" placeholder="answer_1" value="{{data2.answer1}}"></label>
+        <p></p>
+        <br><br>
+        <input type="radio" class="answer" id="answer2" name="answer" value="answer2">
+        <label for="answer2" class="answer"><input type="text" name="answer2" placeholder="answer_2" value="{{data2.answer2}}"></label>
+        <p></p>
+        <br><br>
+        <input type="radio" class="answer" id="answer3" name="answer" value="answer3">
+        <label for="answer3" class="answer"><input type="text" name="answer3" placeholder="answer_3" value="{{data2.answer3}}"></label>
+        <p></p>
+        <br><br>
+        <input type="radio" class="answer" id="answer4" name="answer" value="answer4">
+        <label for="answer4" class="answer"><input type="text" id="answer4" name="answer4" placeholder="answer_4" value="{{data2.answer4}}"></label>
+        <p></p>
+        <p class="text3">The answer is {{data2.the_answer}}</p>
+        <input type="hidden" id="quiz_id" name="quiz_id" value="{{data2.quiz_id}}">
+        <input type="hidden" id="question_number" name="question_number" value="{{data2.number}}">
+        <input type="hidden" id="quesiton_redirect" name="question_redirect" value="{{data2.question}}">
+        <input type="hidden" id="answer1_redirect" name="answer1_redirect" value="{{data2.answer1}}">
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+{% endblock %}

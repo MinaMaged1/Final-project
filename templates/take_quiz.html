@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    : Take quiz
+{% endblock %}
+
+{% block main %}
+    <form action="/review" method="post" class="container p-5 quiz">
+    {% for question in questions %}
+    <p id="question_nubmer" class="question_number">Question {{question.number}}</p>
+    <div class="question">
+        <p id="question" class="question_z">{{question.question}}</p>
+        {% for i in range(4) %}
+        <br><br>
+        <input type="radio" class="answer" id="answer{{i+1}}{{question.number}}r" name="answer{{question.number}}" value="answer{{i+1}}">
+        <label for="answer{{i+1}}{{question.number}}" class="answer"><p id="answer{{i+1}}{{question.number}}"></p></label>
+        <script>
+        var i = {{ i | tojson }} + 1
+        var number = {{ question.number | tojson }};
+        if (i == 1)
+        {
+            if (data)
+            {
+                data = {{ question.answer1 | tojson }};
+                id = "answer"+i+number
+                console.log(id)
+                document.getElementById(id).innerHTML = data
+            }
+            else
+            {
+                console.log("hi")
+                var data = {{ question.answer1 | tojson }};
+                id = "answer"+i+number
+                document.getElementById(id).innerHTML = data
+            }
+        }
+        if (i == 2)
+        {
+            data = {{ question.answer2 | tojson }};
+            id = "answer"+i+number
+            console.log(id)
+            document.getElementById(id).innerHTML = data
+        }
+        if (i == 3)
+        {
+            data = {{ question.answer3 | tojson }};
+            id = "answer"+i+number
+            console.log(id)
+            document.getElementById(id).innerHTML = data
+        }
+        if (i == 4)
+        {
+            data = {{ question.answer4 | tojson }};
+            id = "answer"+i+number
+            console.log(id)
+            document.getElementById(id).innerHTML = data
+        }
+        </script>
+        {% endfor %}
+        </div>
+        <br><br>
+    {% endfor %}
+    <br><br>
+    <input type="hidden" id="quiz_id" name="quiz_id" value="{{quiz_id}}">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}
