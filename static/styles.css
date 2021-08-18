@@ -1,0 +1,186 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+
+.logo
+{
+    float: left;
+    width: 100px;
+    height: auto;
+}
+header
+{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("background.jpg");
+    height: 100vh;
+    -webkit-background-size:cover;
+    background-size:cover;
+    background-position: center center;
+    position: relative;
+}
+.join
+{
+    text-align: center;
+    position: absolute;
+    height:600px;
+    width: 900px;
+    margin: 20% 25%;
+}
+.join h3
+{
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.join h1
+{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+.join h2
+{
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+}
+.main
+{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("background2.jpg");
+    height: 100vh;
+    width: 100%;
+    -webkit-background-size: cover;
+}
+.text
+{
+    text-align: left;
+    font-size: 60px;
+    vertical-align: middle;
+    color: #fff;
+}
+.image
+{
+    text-align: right;
+    height: auto;
+    width: 700px;
+    margin: auto 30px;
+    border-radius: 8px;
+    float: right;
+}
+.button
+{
+    border: 1px solid #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.button:hover
+{
+    background-color: #fff;
+    text-decoration: none;
+    text-align: right;
+}
+.form
+{
+    margin-top: 6%;
+}
+
+.question
+{
+    padding: 50px;
+}
+.answer
+{
+    display: inline-block;
+    padding-right: 240px;
+}
+.question::placeholder
+{
+    vertical-align: top;
+}
+.text2
+{
+    font-size: 60px;
+    vertical-align: middle;
+    color: #fff;
+}
+.button_small
+{
+    color: #f00;
+}
+.title
+{
+    text-align: center;
+    font-size: 60px;
+    color: #000;
+}
+.edit
+{
+    background: #0f0;
+    border: 1px solid #fff;
+    padding: 5px;
+}
+.edit:hover
+{
+    background-color: #fff;
+    text-decoration: none;
+    text-align: right;
+}
+.text3
+{
+    font-size: 20px;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.delete
+{
+    background: #f00;
+    border: 1px solid #fff;
+    padding: 5px;
+}
+.delete:hover
+{
+    background-color: #fff;
+    text-decoration: none;
+    text-align: right;
+}
+.quiz
+{
+    text-align: left;
+}
+.question
+{
+    background-color: #3CBC8D;
+    border: 2px solid;
+}
+.question_number
+{
+    background-color: #fff;
+    font-size: 40px;
+}
+.question_z
+{
+    font-weight: bold;
+    font-size: 30px;
+}
+.score
+{
+    font-weight: bold;
+    margin-top: 6%;
+}
+.results
+{
+    background: #00f;
+    border: 1px solid #fff;
+    padding: 5px;
+    color: #fff;
+}
